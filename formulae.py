@@ -16,3 +16,10 @@ def highest_common_factor(a, b):
             b = b % a
 
     return a if b == 0 else b
+
+
+def lowest_common_multiple(a, b):
+    """Makes use of highest_common_factor() to calculate the LCM efficiently, as:
+        LCM = (a*b) / HCF(a, b). Return this value"""
+
+    return (a * b) / highest_common_factor(a, b)

@@ -44,7 +44,7 @@ class SimultaneousEquationSolver:
             for i in range(3):
                 self.result[i] = self.eqn1[i] + self.eqn2[i]
 
-    def calculate(self):
+    def calculate_unknowns(self):
         self.amend_values()
 
         # if there are no/infinite solutions, there will be a division by zero.

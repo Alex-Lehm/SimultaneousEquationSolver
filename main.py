@@ -45,4 +45,13 @@ class SimultaneousEquationSolver:
                 self.result[i] = self.eqn1[i] + self.eqn2[i]
 
     def calculate(self):
-        pass
+        self.amend_values()
+
+        # if there are no/infinite solutions, there will be a division by zero.
+        # perhaps extend to state no or infinite solutions?
+        try:
+            # simple rearranging to solve y and x
+            self.y = self.result[2] / self.result[1]
+            self.x = (self.eqn1[2] - (self.eqn1[1] * self.y)) / self.eqn1[0]
+        except ZeroDivisionError:
+            return

@@ -1,3 +1,6 @@
+from formulae import lowest_common_multiple
+
+
 class SimultaneousEquationSolver:
 
     def __init__(self):
@@ -19,7 +22,27 @@ class SimultaneousEquationSolver:
         self.eqn2[2] = int(input("Enter value c2: "))
 
     def amend_values(self):
-        pass
+        # calculate what to multiply the equations by for elimination
+        lcm = lowest_common_multiple(self.eqn1[0], self.eqn2[0])
+        multiplier1 = lcm / self.eqn1[0]
+        multiplier2 = lcm / self.eqn2[0]
+
+        # use the calculated multipliers
+        self.eqn1[0] *= multiplier1
+        self.eqn1[1] *= multiplier1
+        self.eqn1[2] *= multiplier1
+
+        self.eqn2[0] *= multiplier2
+        self.eqn2[1] *= multiplier2
+        self.eqn2[2] *= multiplier2
+
+        # eliminate values and store in self.result list
+        if self.eqn1[0] * self.eqn2[0] > 0:  # checks if they are the same sign (for Same Sign Subtract)
+            for i in range(3):
+                self.result[i] = self.eqn1[i] - self.eqn2[i]
+        else:
+            for i in range(3):
+                self.result[i] = self.eqn1[i] + self.eqn2[i]
 
     def calculate(self):
         pass

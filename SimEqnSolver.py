@@ -25,7 +25,7 @@ class SimultaneousEquationSolver:
         self.eqn2 = [0, 0, 0]
         self.result = [0, 0, 0]
 
-    def input_equations(self, eqn1, eqn2):
+    def input_equations(self, eqn1: list, eqn2: list):
         """Method to take user input for the known values
 
         Keyword arguments:

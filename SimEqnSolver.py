@@ -1,6 +1,5 @@
 from formulae import lowest_common_multiple
 
-# TODO: Rename main file to be more meaningful
 # TODO: Remove any user input from this class. Should be handled elsewhere
 # TODO: Add class and method docstrings
 

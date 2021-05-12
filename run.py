@@ -1,4 +1,4 @@
-from main import SimultaneousEquationSolver
+from SimEqnSolver import SimultaneousEquationSolver
 
 if __name__ == "__main__":
     solver = SimultaneousEquationSolver()

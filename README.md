@@ -1,5 +1,5 @@
 # SimultaneousEquationSolver
-Simple Python project to solve 2-dimensional linear equations simultaneously
+Simple Python project to solve 2-dimensional linear equations simultaneously, using elimination.
 
 To run the program:
 * Run `run.py` for a clear example.

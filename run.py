@@ -6,4 +6,4 @@ if __name__ == "__main__":
     solver.calculate_unknowns()
 
     print("""x = {}
-    y = {}""".format(solver.x, solver.y))
+y = {}""".format(solver.x, solver.y))

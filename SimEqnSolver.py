@@ -1,8 +1,5 @@
 from formulae import lowest_common_multiple
 
-# TODO: Remove any user input from this class. Should be handled elsewhere
-# TODO: Add class and method docstrings
-
 
 class SimultaneousEquationSolver:
     """Class to represent a dedicated object to solving (by elimination) linear, 2D simultaneous equations,

@@ -16,7 +16,9 @@ class SimultaneousEquationSolver:
         """Constructor method, creates the following instance variables:
 
         x, y -- the calculated values of the unknowns
+
         eqn1, eqn2 -- lists holding the known values for each equation in the form [0]x + [1]y = [2]
+
         result -- the result of elimination between eqn1 and eqn2"""
         self.x, self.y = None, None
         self.eqn1 = [0, 0, 0]
@@ -24,7 +26,14 @@ class SimultaneousEquationSolver:
         self.result = [0, 0, 0]
 
     def input_equations(self, eqn1, eqn2):
-        """Method to take user input for the known values"""
+        """Method to take user input for the known values
+
+        Keyword arguments:
+
+        eqn1 -- list holding known values for first equation
+        eqn2 -- list holding known values for second equation
+
+        Both eqn1 and eqn2 represent equations of the form [0]x + [1]y = [2]."""
 
         self.eqn1 = eqn1
         self.eqn2 = eqn2

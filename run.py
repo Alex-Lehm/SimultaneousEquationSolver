@@ -5,8 +5,8 @@ def demo():
     solver = SimultaneousEquationSolver()
 
     print("""Please enter values in the following format:
-                                  ax + by = c1
-                                  dx + ey = c2""")
+\t\t\tax + by = c1
+\t\t\tdx + ey = c2""")
 
     eqn1, eqn2 = [0, 0, 0], [0, 0, 0]
 
@@ -21,7 +21,7 @@ def demo():
     solver.calculate_unknowns()
 
     print("""x = {}
-    y = {}""".format(solver.x, solver.y))
+y = {}""".format(solver.x, solver.y))
 
 
 if __name__ == "__main__":

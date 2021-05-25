@@ -45,13 +45,16 @@ class SimultaneousEquationSolver:
         multiplier2 = lcm / self.eqn2[0]
 
         # use the calculated multipliers
-        self.eqn1[0] *= multiplier1
-        self.eqn1[1] *= multiplier1
-        self.eqn1[2] *= multiplier1
 
-        self.eqn2[0] *= multiplier2
-        self.eqn2[1] *= multiplier2
-        self.eqn2[2] *= multiplier2
+        # self.eqn1[0] *= multiplier1
+        # self.eqn1[1] *= multiplier1
+        # self.eqn1[2] *= multiplier1
+        self.eqn1 = list(map(lambda x: x * multiplier1, self.eqn1))
+
+        # self.eqn2[0] *= multiplier2
+        # self.eqn2[1] *= multiplier2
+        # self.eqn2[2] *= multiplier2
+        self.eqn2 = list(map(lambda x: x * multiplier2, self.eqn2))
 
         # eliminate values and store in self.result list
         if self.eqn1[0] * self.eqn2[0] > 0:  # checks if they are the same sign (for Same Sign Subtract)
